@@ -2,20 +2,24 @@
 <head>
     <title></title>
 
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/angular/angular.js"></script>
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/angular/angular.js"></script>
 </head>
 <body ng-controller="homeController as controller" ng-cloak>
-    <input ng-model="text"/>
+
+    <input ng-model="text" />
     <p>{{text}}</p>
     <h2>{{controller.message}}</h2>
+
+    <br />
+    <hr />
 
     <ul>
         <li ng-repeat="car in controller.cars">{{car.model}}</li>
     </ul>
 
 
-    <table ng-hide="controller.cars.length">
+    <table ng-hide="(controller.cars.length == 0)">
         <tr>
             <th>Make</th>
             <th>Model</th>
@@ -44,6 +48,6 @@
         <input type="submit">
     </form>
 
-    <script src="~/ngApp/app.js"></script>
+    <script src="/ngApp/app.js"></script>
 </body>
 </html>

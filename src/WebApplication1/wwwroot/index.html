@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="modToDo">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+</head>
+
+<body ng-controller="homeController as controller" ng-cloak>
+
+    <p>To Do List</p>
+    <ul>
+        <li ng-repeat="ToDo in controller.aryToDo">{{ToDo}}</li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <form ng-submit="controller.mthAddToDo()">
+        <input ng-model="controller.strToDo" />
+        <input type="submit">
+    </form>
+
+
+    <script src="ngApp/ToDo.js"></script>
+</body>
+
+</html>

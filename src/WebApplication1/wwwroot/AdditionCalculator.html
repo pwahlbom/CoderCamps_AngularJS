@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html ng-app="modAdditionCalculator">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+</head>
+
+<body ng-controller="homeController as controller" ng-cloak>
+
+    <input ng-model="controller.nbrNumber1" />
+    <input ng-model="controller.nbrNumber2" />
+
+    <button ng-click="controller.calculate()">ADD</button>
+    
+    <p>The sum is: {{controller.nbrSum}}</p>
+
+    <script src="ngApp/AdditionCalculator.js"></script>
+</body>
+
+</html>
